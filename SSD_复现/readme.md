@@ -1,3 +1,4 @@
+# 第一步：
 # detector文件夹：
 # 调用模型来检测
 '''
@@ -6,7 +7,29 @@ detectior|\\
 ----|
 '''
 >> python model_predict.py
-
+# 第二步：
+# tf_records_creater文件夹：
+## 数据转换用
+'''
+tf_records_creater|\\
+----|\\
+----|
+'''
+## Usage:
+```shell
+python tf_convert_data.py \
+    --dataset_name=pascalvoc \
+    --dataset_dir=/tmp/pascalvoc \
+    --output_name=pascalvoc \
+    --output_dir=/tmp/
+```
+## Window shell:
+```
+# 规定pascalvoc，数据集文件夹路径*/*/，指定数据集名称，指定数据集输出地址
+python tf_convert_data.py  --dataset_name=pascalvoc  --dataset_dir=./voc2007/  --output_name=voc_2007_train  --output_dir=./TFR_Data
+```
+"""
+# 第三步：
 # trainer文件夹：
 # 训练ssd，数据转换模仿ssd-tensorflow的数据转换即可。
 '''
