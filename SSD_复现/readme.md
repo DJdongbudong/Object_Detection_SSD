@@ -1,8 +1,8 @@
 # detector文件夹：
 # 调用模型来检测
 '''
-detectior|
-----|
+detectior|\\
+----|\\
 ----|
 '''
 >> python model_predict.py
